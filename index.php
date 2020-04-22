@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<title>Covid19Exploer</title>
 <?php include 'link/links.php' ?>
 	
 	<?php include 'css/style.php'; ?>
 </head>
 
-<body>
+<body onload="fetch()">
 
 	<div id="content">
 		<div id="wrap">
@@ -38,7 +39,7 @@
 						        <a class="nav-link" href="#prevention">prevention</a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="#">Live count</a>
+						        <a class="nav-link" href="#livecount">Live count</a>
 						      </li>
 						      
 						      
@@ -58,8 +59,7 @@
 								<h1>Let's Fight Covid19 Together</h1>
 
 							</div>
-						
-						
+
 					</div>
 
 
@@ -86,6 +86,32 @@
 						</div>
 						
 					</div>
+
+
+
+<!-- ////////////////////////////covid19 update section///////////////////////////////// -->
+<br><br>
+							<div class="corona_updates container-fluid" id="livecount">
+							<div class="mb-3">
+								<h2 class="text-center text-danger">Covid19 Live Updates</h3>
+							</div>
+
+							<div class="table-responsive">
+								<table class="table table-bordered table-striped text-center" id="tval"> 
+									<tr>
+										<th>Country</th>
+										<th>Total Confirmed</th>
+										<th>Total Recovered</th>
+										<th>Total Deaths</th>
+										<th>New Confirmed</th>
+										<th>New Recovored</th>
+										<th>New Deaths</th>
+									</tr>
+								</table>
+							</div>
+						    </div>
+						
+						
 
 					<!-- ///////////////////////////////Symptoms//////////////////////////// -->
 					<div class="container-fluid colored_section pt-5 pb-5" id="symptoms">
@@ -230,17 +256,22 @@
 							</div>
 							
 						</div>
-
-
-					<!-- //////////////////top button///////////// -->
-
-					  <a href="#" style="" class="mr-3 pull-right"><i class="fa fa-arrow-up" id="mybtn"></i></a>
-
+		
+					
+<!-- //////////////////top button///////////// -->
+  <a href="#" style="" class="mr-3 pull-right"><i class="fa fa-arrow-up" id="mybtn"></i></a>
 
 					</div>
 
 
+<!--	<div class=" container-fluid scrolltop float-right pr-5">
+
+	<i class="fa fa-arrow-up" onclick="topfunction()" id="mybtn"></i>
+	
+</div>  -->
+	
 		</div>
+
 
 				<!-- ////////////////////footer///////////// -->
 			<footer class="mt-5 myfoot">
@@ -252,6 +283,71 @@
 			</footer>
 
 	</div>
+
+	<script type="text/javascript">
+		
+			function fetch(){
+				$.get("https://api.covid19api.com/summary",
+					function(data)
+					{
+						var tbval=document.getElementById('tval');
+						for (var i = 1;i<(data['Countries'].length);i++) {
+							var x=tbval.insertRow();
+							x.insertCell(0);
+
+							tbval.rows[i].cells[0].innerHTML=data['Countries'][i-1]['Country'];
+							tbval.rows[i].cells[0].style.background='#7a4a91';
+							tbval.rows[i].style.color='white';
+
+							x.insertCell(1);
+							tbval.rows[i].cells[1].innerHTML=data['Countries'][i-1]['TotalConfirmed'];
+							tbval.rows[i].cells[1].style.background='#35c1fc';
+							
+
+							x.insertCell(2);
+							tbval.rows[i].cells[2].innerHTML=data['Countries'][i-1]['TotalRecovered'];
+							tbval.rows[i].cells[2].style.background='#40ff5d';
+
+
+							x.insertCell(3);
+							tbval.rows[i].cells[3].innerHTML=data['Countries'][i-1]['TotalDeaths'];
+							tbval.rows[i].cells[3].style.background='#9c0606';
+							
+
+							x.insertCell(4);
+							tbval.rows[i].cells[4].innerHTML=data['Countries'][i-1]['NewConfirmed'];
+							tbval.rows[i].cells[4].style.background='#f52a2a';
+
+
+							x.insertCell(5);
+							tbval.rows[i].cells[5].innerHTML=data['Countries'][i-1]['NewRecovered'];
+							tbval.rows[i].cells[5].style.background='green';
+							
+
+							x.insertCell(6);
+							tbval.rows[i].cells[6].innerHTML=data['Countries'][i-1]['NewDeaths'];
+							tbval.rows[i].cells[6].style.background='red';
+						}
+					});
+			}
+
+
+	// 		var mybtn=document.getElementById("mybtn");
+	// window.onscroll=function(){scroll()};
+	// function scroll() {
+	// 	if(document.body.scrolltop>100||document.documentElement.scrolltop>100){
+	// 		mybtn.style.display="inline-block";}
+	// 		else{
+	// 			mybtn.style.display="none";
+	// 		}
+	// 	}
+
+	// 		function topfunction(){
+	// 			document.body.scrolltop=0;//for safari
+	// 			document.documentElement.scrolltop=0;////forchrome
+	// 		}
+
+	</script>
 
 
 </body>
