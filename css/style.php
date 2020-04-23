@@ -69,7 +69,7 @@ scroll-behavior: smooth;
 html,body{
 	width: 100%;
 
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 
 }
 
@@ -165,7 +165,7 @@ background-color: #fbfafd;
 
 #mybtn{
 
-	display: inline-block;
+	display: block;
 	z-index: 99;
 	outline: none;
 	border:none;
@@ -175,8 +175,10 @@ background-color: #fbfafd;
 	padding: 10px;
 	border-radius: 10px;
 	bottom: 30px;
-	right: 40px;
+	right: 30px;
 	text-decoration: none;
+	position: fixed;
+	float: right;
 
 	border-radius: 10px;
 	

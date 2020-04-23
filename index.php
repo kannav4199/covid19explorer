@@ -6,6 +6,7 @@
 <?php include 'link/links.php' ?>
 	
 	<?php include 'css/style.php'; ?>
+	
 </head>
 
 <body onload="fetch()">
@@ -41,7 +42,9 @@
 						      <li class="nav-item">
 						        <a class="nav-link" href="#livecount">Live count</a>
 						      </li>
-						      
+						      <li class="nav-item">
+						        <a class="nav-link" href="indialivecount.php">Live count India</a>
+						      </li>
 						      
 						    </ul>
 						    
@@ -70,7 +73,7 @@
 							
 						</div>
 						<div class="row">
-							<div class="col-lg-5 col-md-6 col-sm-12 ml-5 pt-3 pl-3">
+							<div class="col-lg-5 col-md-6 col-sm-12 ml-3 items-center pt-3 pl-3">
 								<img src="images/virus.jpg" class="img-fluid" style="border-radius: 10px;">
 								
 							</div>
@@ -258,19 +261,21 @@
 						</div>
 		
 					
-<!-- //////////////////top button///////////// -->
-  <a href="#" style="" class="mr-3 pull-right"><i class="fa fa-arrow-up" id="mybtn"></i></a>
 
-					</div>
-
-
-<!--	<div class=" container-fluid scrolltop float-right pr-5">
+					
+<!-- 						<div class=" container scrolltop float-right pr-5">
 
 	<i class="fa fa-arrow-up" onclick="topfunction()" id="mybtn"></i>
 	
 </div>  -->
+
+ 
 	
 		</div>
+
+
+<!-- //////////////////top button///////////// -->
+  <a href="#" style="" class="mr-3 pull-right"><i class="fa fa-arrow-up" id="mybtn"></i></a>
 
 
 				<!-- ////////////////////footer///////////// -->
@@ -306,7 +311,7 @@
 
 							x.insertCell(2);
 							tbval.rows[i].cells[2].innerHTML=data['Countries'][i-1]['TotalRecovered'];
-							tbval.rows[i].cells[2].style.background='#40ff5d';
+							tbval.rows[i].cells[2].style.background='#00cf0a';
 
 
 							x.insertCell(3);
@@ -332,13 +337,13 @@
 			}
 
 
-	// 		var mybtn=document.getElementById("mybtn");
+	// 		var mybtnn=document.getElementById("mybtn");
 	// window.onscroll=function(){scroll()};
 	// function scroll() {
 	// 	if(document.body.scrolltop>100||document.documentElement.scrolltop>100){
-	// 		mybtn.style.display="inline-block";}
+	// 		mybtnn.style.display="block";}
 	// 		else{
-	// 			mybtn.style.display="none";
+	// 			mybtnn.style.display="none";
 	// 		}
 	// 	}
 
