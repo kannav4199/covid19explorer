@@ -54,14 +54,14 @@
 			<!-- //////////////////////////////////India Live Count update/////////////////////////////// -->
 
 			<div class="container-fluid pt-5">
-				<h2 class="text-center  text-danger">India Covid19 Cases Live Count</h2>
+				<h2 class="text-center  text-danger" style="font-weight: bolder;">India Covid19 Cases Live Count</h2>
 
-				<br><br>
+				<br>
 				<div class="corona_updates container-fluid pt-2" id="indialivecount">
 							
 
 							<div class="table-responsive">
-								<table class="table table-bordered table-striped text-center" id="tval"> 
+								<table class="table table-bordered table-striped text-center"  id="tval"> 
 									<tr>
 										<th>State</th>
 										<th>Total Confirmed</th>
@@ -85,7 +85,7 @@ while($i < $statescount){
 	?>
 
 	<tr>
-		<td><?php echo $coranalive['statewise'][$i]['state'] ?></td>
+		<td style="position: sticky; left: 0; background-color: #00bcd4; "><?php echo $coranalive['statewise'][$i]['state'] ?></td>
 		<td><?php echo $coranalive['statewise'][$i]['confirmed'] ?></td>
 		<td><?php echo $coranalive['statewise'][$i]['active'] ?></td>
 		<td><?php echo $coranalive['statewise'][$i]['recovered'] ?></td>
@@ -114,12 +114,14 @@ while($i < $statescount){
 <!-- //////////////////top button///////////// -->
   <a href="#" style="" class="mr-3 pull-right"><i class="fa fa-arrow-up" id="mybtn"></i></a>
 
+<br>
+<br>
 
 				<!-- ////////////////////footer///////////// -->
 			<footer class="mt-5 myfoot">
 				<div class="text-center container pt-2 pb-2">
 					<h5>made by <a href="https://kannav4199.github.io/">KANNAV SHARMA</a></h5>
-					<p>Covid19Explorer@2020</p>
+					<p><a href="index.php">Covid19Explorer@2020</p>
 				</div>
 
 			</footer>

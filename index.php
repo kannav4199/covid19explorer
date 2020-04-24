@@ -40,7 +40,7 @@
 						        <a class="nav-link" href="#prevention">prevention</a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="#livecount">Live count</a>
+						        <a class="nav-link" href="#livecount">Live count worldwide</a>
 						      </li>
 						      <li class="nav-item">
 						        <a class="nav-link" href="indialivecount.php">Live count India</a>
@@ -59,7 +59,7 @@
 					<div class="main_header container-fluid" id="home">
 
 							<div class="justify-content-center align-content-center w-100 h-100 d-flex align-items-center">
-								<h1>Let's Fight Covid19 Together</h1>
+								<h1 style="color: #e81313 !important;">Let's Fight Covid19 Together</h1>
 
 							</div>
 
@@ -69,18 +69,18 @@
 					<!-- //////////////////////////about/////////////////////// -->
 					<div class="container-fluid  pt-5 pb-5" id=about>
 						<div class="section_header mt-4 mb-5  text-center">
-							<h1>About COVID-19</h1>
+							<h1 style="font-weight: bold;">About COVID-19</h1>
 							
 						</div>
 						<div class="row">
-							<div class="col-lg-5 col-md-6 col-sm-12 ml-3 items-center pt-3 pl-3">
+							<div class="col-lg-5 col-md-6 col-sm-12 ml-2 items-center pt-3 pl-3">
 								<img src="images/virus.jpg" class="img-fluid" style="border-radius: 10px;">
 								
 							</div>
 							
 							<div class="col-lg-5 col-md-6 col-sm-12 pt-3 pl-3">
-								<h3>What is Coronavirus ?</h3>
-								<p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+								<h2 style="font-weight: bold; text-align: center;">What is Coronavirus ?</h3>
+								<p  style="text-align: center !important;">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
 
 								Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.
 								</p>
@@ -96,7 +96,7 @@
 <br><br>
 							<div class="corona_updates container-fluid" id="livecount">
 							<div class="mb-3">
-								<h2 class="text-center text-danger">Covid19 Live Updates</h3>
+								<h2 style="font-weight: bolder;" class="text-center text-danger" >Covid19 Live Updates</h2>
 							</div>
 
 							<div class="table-responsive">
@@ -111,15 +111,20 @@
 										<th>New Deaths</th>
 									</tr>
 								</table>
+
 							</div>
+
+							
 						    </div>
+
+						    <a href="indialivecount.php" class="text-capitalize text-info" style="padding-left:10%; padding-top: 40%; margin-top: 20%; align-items: center;text-align: center;" >Click here for india Live count (statewise)</a>
 						
 						
 
 					<!-- ///////////////////////////////Symptoms//////////////////////////// -->
-					<div class="container-fluid colored_section pt-5 pb-5" id="symptoms">
+					<div class="container-fluid colored_section pt-5 pb-5" id="symptoms" style="background-color: white !important;">
 						<div class="section_header mt-4 mb-5  text-center">
-							<h1>Coronavirus Symptoms</h1>
+							<h2 style="font-weight: bold;">Coronavirus Symptoms</h2>
 							
 						</div>
 						<div class="row">
@@ -169,7 +174,7 @@
 
 
 
-					<div class="container-fluid  pt-5 pb-5 " id="prevention">
+					<div class="container-fluid  pt-5 pb-5 " id="prevention" style="background-color: #e3e3de !important;">
 						<div class="mt-4 mb-5  ">
 							<h1>Preventions Against Coronavirus</h1>
 
@@ -282,7 +287,7 @@
 			<footer class="mt-5 myfoot">
 				<div class="text-center container pt-2 pb-2">
 					<h5>made by <a href="https://kannav4199.github.io/">KANNAV SHARMA</a></h5>
-					<p>Covid19Explorer@2020</p>
+					<p><a href="index.php">Covid19Explorer@2020</p>
 				</div>
 
 			</footer>
@@ -302,7 +307,8 @@
 
 							tbval.rows[i].cells[0].innerHTML=data['Countries'][i-1]['Country'];
 							tbval.rows[i].cells[0].style.background='#7a4a91';
-							tbval.rows[i].style.color='white';
+							tbval.rows[i].cells[0].style="position: sticky; left: 0; background-color: #00bcd4;";
+							tbval.rows[i].style.color='white !important';
 
 							x.insertCell(1);
 							tbval.rows[i].cells[1].innerHTML=data['Countries'][i-1]['TotalConfirmed'];

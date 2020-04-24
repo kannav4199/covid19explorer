@@ -79,6 +79,10 @@ html,body{
 	/*margin:auto;
 	padding:auto;
 	*/
+background-image: linear-gradient(to right top, #02e0ff, #29d6ff, #45ccff, #5cc1fb, #70b6f4, #6eb9f5, #6bbcf7, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+background-repeat: no-repeat;
+
+background-size: 100% 100%;
 letter-spacing: 1px;
 
 
@@ -116,6 +120,39 @@ background-color: #fbfafd;
 #prevention img{
 	border-radius: 12px;
 }
+
+
+.table-responsive{
+	height: 450px;
+	
+	align-items: center;
+	justify-content: center;
+	margin:auto;
+	padding: auto;
+	overflow-y: scroll;
+	font-size: 1.1rem;
+	width: 94%;
+}
+
+#tval th{
+	color: white !important;
+	position: sticky;
+	background-color: #00bcd4;
+	top: 0;
+	z-index: 99;
+}
+
+
+#tval tr th:nth-child(1)
+{
+	width: 9%;
+	text-align: center;
+}
+
+#tval td{
+	font-weight: bold;
+}
+
 .main_header h1{
 	font-size: 3rem;
 }
@@ -175,7 +212,7 @@ background-color: #fbfafd;
 	padding: 10px;
 	border-radius: 10px;
 	bottom: 30px;
-	right: 30px;
+	right: 14px;
 	text-decoration: none;
 	position: fixed;
 	float: right;
@@ -202,4 +239,22 @@ footer{
 footer h5,p{
 	margin-bottom: 0;
 }
+/*
+
+@media screen and (min-width: 580px) {
+
+
+.table-responsive{
+	height: 400px;
+	
+	align-items: center;
+	justify-content: center;
+	margin:auto;
+	padding: auto;
+	overflow-y: scroll;
+	font-size: 1.1rem;
+	width: 100%;
+
+}*/
+	}
 </style>
